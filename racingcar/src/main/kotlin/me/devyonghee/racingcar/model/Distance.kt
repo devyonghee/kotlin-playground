@@ -22,4 +22,8 @@ class Distance(
     override fun hashCode(): Int {
         return value
     }
+
+    override fun toString(): String {
+        return "Distance(value=$value)"
+    }
 }
