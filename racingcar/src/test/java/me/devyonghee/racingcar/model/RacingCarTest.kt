@@ -33,3 +33,6 @@ class RacingCarTest : StringSpec({
         }
 
 })
+
+val ONLY_GO_CAR = RacingCar("go", GO_MOVE_STRATEGY)
+val ONLY_STOP_CAR = RacingCar("stop", STOP_MOVE_STRATEGY)

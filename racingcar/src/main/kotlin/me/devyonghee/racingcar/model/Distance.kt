@@ -1,11 +1,14 @@
 package me.devyonghee.racingcar.model
 
 class Distance(
-    private val value: Int
+    val value: Int,
 ) {
-
     init {
         require(value >= 0) { "distance value($value) must be equal or greater than 0" }
+    }
+
+    operator fun plus(distance: Distance): Distance {
+        return Distance(this.value + distance.value)
     }
 
     override fun equals(other: Any?): Boolean {
