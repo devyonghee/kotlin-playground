@@ -2,10 +2,12 @@ package me.devyonghee.racingcar.model
 
 import io.kotest.assertions.throwables.shouldNotThrowAny
 import io.kotest.assertions.throwables.shouldThrow
+import io.kotest.core.annotation.DisplayName
 import io.kotest.core.spec.style.StringSpec
 import io.kotest.inspectors.forAll
 import io.kotest.matchers.shouldBe
 
+@DisplayName("레이싱 카")
 class RacingCarTest : StringSpec({
 
     "생성" {
@@ -22,7 +24,7 @@ class RacingCarTest : StringSpec({
         }
     }
 
-    listOf(STOP_MOVE_STRATEGY to Distance(0), GO_MOVE_STRATEGY to Distance(1))
+    listOf(STOP_MOVE_STRATEGY to Distance.from(0), GO_MOVE_STRATEGY to Distance.from(1))
         .forAll {
             "움직임이 ${it.first.movement()} 라면 움직인 거리는 ${it.second}" {
                 // given
@@ -31,7 +33,6 @@ class RacingCarTest : StringSpec({
                 racingCar.movedDistance() shouldBe it.second
             }
         }
-
 })
 
 val ONLY_GO_CAR = RacingCar("go", GO_MOVE_STRATEGY)

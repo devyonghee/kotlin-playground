@@ -5,7 +5,7 @@ class RacingStadium(
 ) {
     private val tracks: List<Track> = cars.map { Track(it) }
 
-    fun race(cycleCount: Int): List<List<Track>> {
+    fun racingHistory(cycleCount: Int): List<List<Track>> {
         require(MIN_CYCLE_COUNT <= cycleCount) { "cycle count(${cycleCount}) must be equal or greater than $MIN_CYCLE_COUNT" }
         var currentTracks = tracks
         val history: MutableList<List<Track>> = mutableListOf()

@@ -1,9 +1,8 @@
 package me.devyonghee.racingcar.model
 
-
 class RacingCar(
     val name: String,
-    private val moveStrategy: MoveStrategy
+    val moveStrategy: MoveStrategy,
 ) {
     init {
         require(name.isNotBlank()) { "car name must be not blank" }
@@ -40,7 +39,7 @@ class RacingCar(
 
     companion object {
         private const val MAX_NAME_LENGTH = 5
-        private val GO_DISTANCE = Distance(1)
-        private val STOP_DISTANCE = Distance(0)
+        private val GO_DISTANCE = Distance.from(1)
+        private val STOP_DISTANCE = Distance.from(0)
     }
 }
