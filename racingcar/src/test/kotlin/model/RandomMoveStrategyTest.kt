@@ -1,4 +1,4 @@
-package me.devyonghee.racingcar.model
+package model
 
 import io.kotest.assertions.throwables.shouldNotThrowAny
 import io.kotest.core.annotation.DisplayName
@@ -7,6 +7,8 @@ import io.kotest.inspectors.forAll
 import io.kotest.matchers.shouldBe
 import io.mockk.every
 import io.mockk.mockk
+import me.devyonghee.racingcar.model.Movement
+import me.devyonghee.racingcar.model.RandomMoveStrategy
 import kotlin.random.Random
 
 @DisplayName("랜덤 이동 전략")

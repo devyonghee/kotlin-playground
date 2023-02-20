@@ -1,4 +1,4 @@
-package me.devyonghee.racingcar.model
+package model
 
 import io.kotest.assertions.throwables.shouldNotThrowAny
 import io.kotest.assertions.throwables.shouldThrow
@@ -6,6 +6,7 @@ import io.kotest.core.annotation.DisplayName
 import io.kotest.core.spec.style.StringSpec
 import io.kotest.inspectors.forAll
 import io.kotest.matchers.shouldBe
+import me.devyonghee.racingcar.model.Distance
 
 @DisplayName("이동 거리")
 class DistanceTest : StringSpec({

@@ -1,9 +1,12 @@
-package me.devyonghee.racingcar.model
+package model
 
 import io.kotest.assertions.throwables.shouldNotThrowAny
 import io.kotest.core.annotation.DisplayName
 import io.kotest.core.spec.style.StringSpec
 import io.kotest.matchers.shouldBe
+import me.devyonghee.racingcar.model.Distance
+import me.devyonghee.racingcar.model.Track
+import me.devyonghee.racingcar.model.furthestTracks
 
 @DisplayName("트랙")
 class TrackTest : StringSpec({
