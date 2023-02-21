@@ -3,7 +3,7 @@ package me.devyonghee.racingcar.model
 import kotlin.random.Random
 
 class RandomMoveStrategy(
-    private val random: Random,
+    private val random: Random
 ) : MoveStrategy {
 
     override fun movement(): Movement {
@@ -30,8 +30,8 @@ class RandomMoveStrategy(
     }
 
     companion object {
-        private const val UNTIL_VALUE: Int = 10;
-        private const val MOVE_LIMIT: Int = 4;
+        private const val UNTIL_VALUE: Int = 10
+        private const val MOVE_LIMIT: Int = 4
 
         val default = RandomMoveStrategy(Random.Default)
     }

@@ -3,7 +3,7 @@ package me.devyonghee.racingcar.model
 private val FACTORY: MutableMap<Int, Distance> = mutableMapOf()
 
 class Distance private constructor(
-    val value: Int,
+    val value: Int
 ) : Comparable<Distance> {
     init {
         require(value >= 0) { "distance value($value) must be equal or greater than 0" }

@@ -2,7 +2,7 @@ package me.devyonghee.racingcar.model
 
 class Track(
     val car: RacingCar,
-    val distance: Distance = INIT_DISTANCE,
+    val distance: Distance = INIT_DISTANCE
 ) {
 
     fun nextRound(): Track {

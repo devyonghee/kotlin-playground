@@ -23,9 +23,9 @@ class RandomMoveStrategyTest : StringSpec({
 
     listOf(1 to Movement.STOP, 3 to Movement.STOP, 4 to Movement.GO, 9 to Movement.GO).forAll {
         "movement 숫자가 ${it.first}이면 ${it.second}" {
-            //given
+            // given
             every { random.nextInt(any()) } returns it.first
-            //when & then
+            // when & then
             RandomMoveStrategy(random).movement() shouldBe it.second
         }
     }

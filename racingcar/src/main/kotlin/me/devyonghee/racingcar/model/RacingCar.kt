@@ -2,7 +2,7 @@ package me.devyonghee.racingcar.model
 
 class RacingCar(
     val name: String,
-    val moveStrategy: MoveStrategy,
+    val moveStrategy: MoveStrategy
 ) {
     init {
         require(name.isNotBlank()) { "car name must be not blank" }

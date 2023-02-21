@@ -9,7 +9,6 @@ import me.devyonghee.racingcar.view.inputNames
 import me.devyonghee.racingcar.view.printHistory
 import me.devyonghee.racingcar.view.printWinners
 
-
 object CarRacingGame {
 
     private const val NAME_DELIMITER = ","
