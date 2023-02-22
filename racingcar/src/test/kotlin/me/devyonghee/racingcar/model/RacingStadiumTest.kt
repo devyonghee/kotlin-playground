@@ -7,9 +7,6 @@ import io.kotest.core.spec.style.StringSpec
 import io.kotest.inspectors.forAll
 import io.kotest.matchers.collections.shouldHaveSize
 import io.kotest.matchers.shouldBe
-import me.devyonghee.racingcar.model.Distance
-import me.devyonghee.racingcar.model.RacingStadium
-import me.devyonghee.racingcar.model.Track
 
 @DisplayName("레이싱 경기장")
 class RacingStadiumTest : StringSpec({
