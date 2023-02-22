@@ -1,4 +1,4 @@
-package model
+package me.devyonghee.racingcar.model
 
 import io.kotest.assertions.throwables.shouldNotThrowAny
 import io.kotest.core.annotation.DisplayName

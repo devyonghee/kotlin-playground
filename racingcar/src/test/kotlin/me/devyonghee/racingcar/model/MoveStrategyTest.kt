@@ -1,4 +1,4 @@
-package model
+package me.devyonghee.racingcar.model
 
 import me.devyonghee.racingcar.model.MoveStrategy
 import me.devyonghee.racingcar.model.Movement
