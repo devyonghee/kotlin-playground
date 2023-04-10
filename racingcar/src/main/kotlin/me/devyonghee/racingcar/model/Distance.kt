@@ -2,7 +2,7 @@ package me.devyonghee.racingcar.model
 
 private val FACTORY: MutableMap<Int, Distance> = mutableMapOf()
 
-class Distance private constructor(
+data class Distance private constructor(
     val value: Int
 ) : Comparable<Distance> {
     init {
@@ -15,25 +15,6 @@ class Distance private constructor(
 
     override fun compareTo(other: Distance): Int {
         return this.value.compareTo(other.value)
-    }
-
-    override fun equals(other: Any?): Boolean {
-        if (this === other) return true
-        if (javaClass != other?.javaClass) return false
-
-        other as Distance
-
-        if (value != other.value) return false
-
-        return true
-    }
-
-    override fun hashCode(): Int {
-        return value
-    }
-
-    override fun toString(): String {
-        return "Distance(value=$value)"
     }
 
     companion object {

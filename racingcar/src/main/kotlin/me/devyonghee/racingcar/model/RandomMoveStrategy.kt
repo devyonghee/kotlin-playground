@@ -2,7 +2,7 @@ package me.devyonghee.racingcar.model
 
 import kotlin.random.Random
 
-class RandomMoveStrategy(
+data class RandomMoveStrategy(
     private val random: Random
 ) : MoveStrategy {
 
@@ -12,21 +12,6 @@ class RandomMoveStrategy(
         } else {
             Movement.STOP
         }
-    }
-
-    override fun equals(other: Any?): Boolean {
-        if (this === other) return true
-        if (javaClass != other?.javaClass) return false
-
-        other as RandomMoveStrategy
-
-        if (random != other.random) return false
-
-        return true
-    }
-
-    override fun hashCode(): Int {
-        return random.hashCode()
     }
 
     companion object {

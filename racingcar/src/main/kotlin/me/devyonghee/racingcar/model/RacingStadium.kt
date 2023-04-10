@@ -1,19 +1,16 @@
 package me.devyonghee.racingcar.model
 
-class RacingStadium(
-    cars: List<RacingCar>
+data class RacingStadium(
+    val cars: List<RacingCar>
 ) {
-    private val tracks: List<Track> = cars.map { Track(it) }
-
     fun racingHistory(cycleCount: Int): List<List<Track>> {
         require(MIN_CYCLE_COUNT <= cycleCount) { "cycle count($cycleCount) must be equal or greater than $MIN_CYCLE_COUNT" }
-        var currentTracks = tracks
-        val history: MutableList<List<Track>> = mutableListOf()
-        for (i in 1..cycleCount) {
-            currentTracks = currentTracks.nextRounds()
-            history.add(currentTracks)
-        }
-        return history
+        var currentTracks = cars.map { Track(it) }
+        return (1..cycleCount)
+            .map { _ ->
+                currentTracks = currentTracks.nextRounds()
+                currentTracks
+            }
     }
 
     companion object {

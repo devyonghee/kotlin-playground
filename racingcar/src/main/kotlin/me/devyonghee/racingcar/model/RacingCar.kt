@@ -1,6 +1,6 @@
 package me.devyonghee.racingcar.model
 
-class RacingCar(
+data class RacingCar(
     val name: String,
     val moveStrategy: MoveStrategy
 ) {
@@ -18,24 +18,6 @@ class RacingCar(
     }
 
     private fun isGone() = moveStrategy.movement() == Movement.GO
-
-    override fun equals(other: Any?): Boolean {
-        if (this === other) return true
-        if (javaClass != other?.javaClass) return false
-
-        other as RacingCar
-
-        if (name != other.name) return false
-        if (moveStrategy != other.moveStrategy) return false
-
-        return true
-    }
-
-    override fun hashCode(): Int {
-        var result = name.hashCode()
-        result = 31 * result + moveStrategy.hashCode()
-        return result
-    }
 
     companion object {
         private const val MAX_NAME_LENGTH = 5
